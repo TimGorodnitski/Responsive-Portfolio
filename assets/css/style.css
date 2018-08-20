@@ -12,12 +12,15 @@ body{
     background-repeat: repeat;
 }
 
+
+/* Flexbox wrapper so footer is always after this flex container */
 #wrapper {
     display: flex;
     min-height: 100%;
     flex-direction: column;
 }
 
+/* Sets flex-grow flex-shrink and flex-basis to auto settings. Allows the flex container to grow and shrink.  */
 main {
     flex: 1;
 }
@@ -33,6 +36,10 @@ nav {
     /* Navbar bottom border */
     border-bottom: solid;
     border-bottom-color: #4aaaa5;
+
+
+    /* Needed to keep from disappearing on portfolio for some reason */
+    min-height:44px;
 }
 
 /* Logo left side of navbar */
@@ -77,27 +84,29 @@ li a {
     /* Containers for individual links */
     padding: 14px 16px;
     background-color: #666666;
+    color:#777777;
     text-decoration: none;
 }
 
 
 /* Navbar Link Color styling */
-nav a:link {
-    color: #777777;
-}
 
-nav a.active {
-    color: #4aaaa5;
-}
 
 nav a:visited {
-    color: #444;
+    text-decoration: none;
+}
+
+nav a:link {
+    color: #777777;
 }
 
 nav a:hover {
     color: #4aaaa5;
 }
 
+.active {
+    color:#4aaaa5;
+}
 
 /*  Container for main content  */
 .container {
@@ -120,7 +129,7 @@ nav a:hover {
     border-color:#dddddd;
 }
 
-/* Header for main containers */
+/* Header for *main* content */
 header {
 
     /* Header box size */
@@ -134,18 +143,32 @@ header {
 
 
 /* My Profile Content */
-img {
+.headshot { 
+
+    /* Floats image so that text can sit next to it and wrap around/under it */
     float:left;
+
+    /* Headshot styling */
     border-radius: 25px;
-    margin: 10px 20px 10px 20px;
+    margin: 10px 20px;
 }
 
+
+/* Spacing for the text on my profile page */
 #profiletext {
     padding: 20px 20px;
 }
 
 
+/* Contact form */
 
+form {
+    padding-left: 30px;
+}
+
+form * {
+    margin: 10px 10px;
+}
 
 
 /*  Footer */
@@ -167,15 +190,4 @@ footer {
     margin-top: 60px;
     padding: 20px 0px 0px 0px;
 
-}
-
-
-/* Contact form */
-
-form {
-    padding-left: 30px;
-}
-
-form * {
-    margin: 10px 10px;
 }
