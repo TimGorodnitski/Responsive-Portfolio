@@ -1,0 +1,176 @@
+html, body, #wrapper {
+    height: 100%;
+    width: 100%;       
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0 0 0 0 ;
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+    background-image: url('background.png');
+    background-repeat: repeat;
+}
+
+#wrapper {
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+
+/*  navbar */
+nav {
+    background-color: #ffffff;
+
+    /* Important, don't know why */
+    overflow: hidden;
+
+    /* Navbar bottom border */
+    border-bottom: solid;
+    border-bottom-color: #4aaaa5;
+}
+
+/* Logo left side of navbar */
+.logo {
+
+    /* Logo box positioning */
+    float: left;
+    margin: 0;
+    position: absolute;
+    left: 140px;
+
+    /* Logo box size */
+    padding:  14px 18px;
+
+    /* Logo colors and font */
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    background-color:#4aaaa5;
+    color:white;
+}
+
+/* List of links to other pages, ul acts like container for link list */
+ul {
+    /* Removes bulletpoints from list */
+    list-style-type: none;
+    
+    /* List container positioning */
+    float:right;
+    margin-top: 0;
+    margin-right: 5%;
+
+    /* List container sizing. Determines navbar div height. Don't know why.  */
+    padding: 14px 18px;   
+}
+
+li {
+    /* Makes the list horizontal */
+    display: inline;
+}
+
+/* Individual list items */
+li a {
+    /* Containers for individual links */
+    padding: 14px 16px;
+    background-color: #666666;
+    text-decoration: none;
+}
+
+
+/* Navbar Link Color styling */
+nav a:link {
+    color: #777777;
+}
+
+nav a.active {
+    color: #4aaaa5;
+}
+
+nav a:visited {
+    color: #444;
+}
+
+nav a:hover {
+    color: #4aaaa5;
+}
+
+
+/*  Container for main content  */
+.container {
+
+    /* Container size & color */
+    width: 960px;
+    padding: 0px 0px 0px 0px;
+    background-color: #ffffff;
+
+    /* Container positioning */
+    margin-top: 40px;
+
+    /* Centers the container */
+    margin-left: auto;
+    margin-right: auto;
+
+    /* Border around container */
+    border-style: solid;
+    border-width: 3px;
+    border-color:#dddddd;
+}
+
+/* Header for main containers */
+header {
+
+    /* Header box size */
+    padding: 10px 0px 10px 50px;
+
+    /* Header text style */
+    font-family: 'Georgia', Times, 'Times New Roman', serif;
+    color:#4aaaa5; 
+    font-size: 34px;
+}
+
+img {
+    border-radius: 25px;
+    margin: 20px 0 0 20px;
+}
+
+
+/*  Footer */
+.footer {
+
+    /* Text & background styling */
+    background-color:#666666;
+    text-align: center;
+    color: #444;
+
+    /* Top Border */
+    border-top: solid;
+    border-top-width: 6px;
+    border-top-color: #4aaaa5;
+
+    /* Footer div positioning */
+
+
+    /* Footer Size */
+    width: 100%;
+    height:  40px;
+    margin-top: 60px;
+    padding: 20px 0px 0px 0px;
+
+}
+
+
+/* contact form */
+
+form {
+    padding-left: 30px;
+}
+
+form * {
+    margin: 10px 10px;
+}
