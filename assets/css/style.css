@@ -15,18 +15,39 @@ body{
 
 /* Flexbox wrapper so footer is always after this flex container */
 #wrapper {
+    margin:0;
     display: flex;
     min-height: 100%;
     flex-direction: column;
 }
 
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    clear: both;    
+
+}
+
 /* Sets flex-grow flex-shrink and flex-basis to auto settings. Allows the flex container to grow and shrink.  */
-main {
+#main-container {
     flex: 1;
 }
 
 
 /*  navbar */
+
+#masthead {
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    margin: 0 0 30px;
+    overflow: auto;
+    color: #fff;
+    background: #fff;
+    border-bottom: 2px solid #ccc;
+  }
+
 nav {
     background-color: #ffffff;
 
@@ -51,7 +72,7 @@ nav {
     position: absolute;
     left: 140px;
 
-    /* Logo box size */
+    /* Logo box size, set to match li a */
     padding:  14px 18px;
 
     /* Logo colors and font */
@@ -76,7 +97,7 @@ ul {
 
 li {
     /* Makes the list horizontal */
-    display: inline;
+    display: inline-block;
 }
 
 /* Individual list items */
@@ -109,10 +130,12 @@ nav a:hover {
 }
 
 /*  Container for main content  */
-.container {
+.main-section {
 
+    float: left;
     /* Container size & color */
-    width: 960px;
+    width: 100%;
+    max-width:960px;
     padding: 0px 0px 0px 0px;
     background-color: #ffffff;
 
@@ -159,6 +182,33 @@ header {
     padding: 20px 20px;
 }
 
+#portfolio  {
+    min-height: calc(80vh - 70px);
+}
+
+.work {
+    position: relative;
+    float: left;
+    width: 200px;
+    margin: 20px;
+    overflow:hidden;
+}
+
+.work h3 {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 0;
+    font-weight: 300;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background: #4aaaa5;
+    border-bottom: 0;
+  }
+
+
 
 /* Contact form */
 
@@ -187,7 +237,47 @@ footer {
     /* Footer Size */
     width: 100%;
     height:  40px;
-    margin-top: 60px;
+    margin-top: 20px;
     padding: 20px 0px 0px 0px;
 
+}
+
+
+@media only screen and (max-width: 980px) {
+    .main-section {
+        width: 800px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main-section {
+        width:600px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .main-section {
+        width:480px;
+    }
+
+    .logo {
+        position:fixed;
+        margin-left:0;
+        left:0;
+        top:0;
+        width:100%;
+        text-align: center;
+        overflow:hidden;
+    }
+
+    nav {
+        border-bottom: none;
+    }
+
+    ul {
+        position:fixed;
+        margin-top:45px;
+    }
+
+    
 }
